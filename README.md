@@ -1,5 +1,7 @@
 
-  #README.md Doctor
+  # README.md Doctor
+
+  ## Badge
   I do not have a badge right now.
   ## Description 
   README.md Doctor allows users to easily create a professional README.md file for a given project by answering a series of questions.

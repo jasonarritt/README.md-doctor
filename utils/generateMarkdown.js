@@ -58,7 +58,8 @@ const mockData = {
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
   return `
-  #${data.title}
+  # ${data.title}
+  ## Badge
   ${data.badge}
   ## Description 
   ${data.description}
