@@ -87,7 +87,7 @@ const questions = [
 // Collect contribution information
 {
     type: 'input',
-    name: 'contribute',
+    name: 'contributions',
     message: 'Please let users know how they can contribute to the project:',
     validate: contributeInput => {
         if (contributeInput) {
@@ -114,6 +114,36 @@ const questions = [
     }
 },
 
+// Collect repo information
+{
+    type: 'input',
+    name: 'repo',
+    message: 'Please enter the URL for the repository:',
+    validate: repoInput => {
+        if (repoInput) {
+          return true;
+        } else {
+          console.log('Please enter the repository URL for this project!');
+          return false;
+        }
+    }
+},
+
+// Collect GitHub information
+{
+    type: 'input',
+    name: 'github',
+    message: 'Please enter your GitHub URL:',
+    validate: githubInput => {
+        if (githubInput) {
+          return true;
+        } else {
+          console.log('Please enter the URL for your GitHub!');
+          return false;
+        }
+    }
+},
+
 // Collect email for questions/contact
 {
     type: 'input',
@@ -135,14 +165,21 @@ const promptUser = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile('./dist/README.md', data, err => {
+
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
     promptUser()
-    .then(function(data){
+    .then(function(data) {
         console.log(data);
-    });
+    })
+    .then(function(data) {
+        return writeToFile(fileName, data);
+    })
 }
 
 // Function call to initialize app
