@@ -7,7 +7,7 @@ const generateMarkdown = require ('./utils/generateMarkdown.js');
 const questions = [
 
 // Collect project title
-console.log('IMPORTANT! ALL FIELDS ARE REQUIRED.')
+// console.log('IMPORTANT! ALL FIELDS ARE REQUIRED.')
 {
     type: 'input',
     name: 'title',
@@ -128,15 +128,22 @@ console.log('IMPORTANT! ALL FIELDS ARE REQUIRED.')
         }
     }
 }
-
-
 ];
+
+const promptUser = () => {
+    return inquirer.prompt(questions);
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    promptUser()
+    .then(function(data){
+        console.log(data);
+    });
+}
 
 // Function call to initialize app
 init();
