@@ -43,6 +43,7 @@ function renderLicenseSection(license) {
 
 const mockData = {
   title: 'README.md Doctor',
+  description: 'README.md Doctor allows users to easily create a professional README.md file for a given project by answering a series of questions.',
   badge: 'I do not have a badge right now.',
   installation: 'At this time, installation requires a user to clone the README.md-doctor repository to their local machine and using Node to run index.js ("node index.js")',
   usage: 'When README.md Doctor is initialized the user will be prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.',
@@ -55,15 +56,16 @@ const mockData = {
 };
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+const generateMarkdown = data => {
+  return `
+  #${data.title}
   ${data.badge}
   ## Description 
   ${data.description}
   ## Table of contents
   - [Installation](#Installation)
   - [Usage](#Usage)
-  - [Licence](#Licence)
+  - [License](#License)
   - [Contributions](#Contributions)
   - [Testing](#Testing)
   - [Repository Link](#Repository)
@@ -89,6 +91,6 @@ function generateMarkdown(data) {
 `;
 };
 
-console.log(generateMarkdown(mockData));
+// console.log(generateMarkdown(mockData));
 
-// module.exports = generateMarkdown;
+module.exports = generateMarkdown;

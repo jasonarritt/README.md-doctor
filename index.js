@@ -3,6 +3,20 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require ('./utils/generateMarkdown.js');
 
+const mockData = {
+    title: 'README.md Doctor',
+    description: 'README.md Doctor allows users to easily create a professional README.md file for a given project by answering a series of questions.',
+    badge: 'I do not have a badge right now.',
+    installation: 'At this time, installation requires a user to clone the README.md-doctor repository to their local machine and using Node to run index.js ("node index.js")',
+    usage: 'When README.md Doctor is initialized the user will be prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.',
+    license: 'Currently there is no license in use for README.md Doctor.',
+    contributions: 'So far all contributions have been made by myself.',
+    testing: 'So far all testing has been conducted on my local machine, on which I am currently writing this',
+    repo: 'https://github.com/jasonarritt/README.md-doctor',
+    github: 'https://github.com/jasonarritt',
+    contact: 'jason.a.arritt@gmail.com'
+  };
+
 // TODO: Create an array of questions for user input
 const questions = [
 
@@ -27,6 +41,21 @@ const questions = [
     type: 'input',
     name: 'description',
     message: 'What is the description for this project?',
+    validate: descriptionInput => {
+        if (descriptionInput) {
+          return true;
+        } else {
+          console.log('Please enter your project description!');
+          return false;
+        }
+    }
+},
+
+// Collect badge information
+{
+    type: 'input',
+    name: 'badge',
+    message: 'Please enter the badge for this project:',
     validate: descriptionInput => {
         if (descriptionInput) {
           return true;
@@ -165,22 +194,33 @@ const promptUser = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
+function writeToFile(data) {
     fs.writeFile('./dist/README.md', data, err => {
-
-    })
+        if (err) {
+            console.log(err);
+            return;
+        // when the README has been created 
+        } else {
+            console.log("Your README.md file has been successfully created! It can be retrieved from the dist folder.")
+        }
+    });
 }
 
 // TODO: Create a function to initialize app
 function init() {
     promptUser()
     .then(function(data) {
-        console.log(data);
+        return generateMarkdown(data);
     })
     .then(function(data) {
-        return writeToFile(fileName, data);
+    writeToFile(data)
     })
+    .catch(err => {
+        console.log(err);
+    });
+
 }
+
 
 // Function call to initialize app
 init();
