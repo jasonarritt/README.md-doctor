@@ -103,7 +103,7 @@ const questions = [
     type: 'list',
     name: 'license',
     message: 'Please choose a license option for this project.',
-    choices: ['None', 'MIT', 'ISC', 'Apache', 'GPL', 'BSD',]
+    choices: ['None', 'MIT', 'ISC', 'Apache', 'GNU GPLv3', 'BSD',]
 },
 
 // Collect contribution information
@@ -155,12 +155,12 @@ const questions = [
 {
     type: 'input',
     name: 'github',
-    message: 'Please enter your GitHub URL:',
+    message: 'Please enter your GitHub username:',
     validate: githubInput => {
         if (githubInput) {
           return true;
         } else {
-          console.log('Please enter the URL for your GitHub!');
+          console.log('Please enter the username of your GitHub account!');
           return false;
         }
     }
