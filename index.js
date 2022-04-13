@@ -100,17 +100,10 @@ const questions = [
 
 // Collect license information
 {
-    type: 'input',
+    type: 'list',
     name: 'license',
-    message: 'Please enter the license or badge link for this project:',
-    validate: licenseInput => {
-        if (licenseInput) {
-          return true;
-        } else {
-          console.log('Please enter license or badge for this project!');
-          return false;
-        }
-    }
+    message: 'Please choose a license option for this project.',
+    choices: ['None', 'MIT', 'ISC', 'Apache', 'GPL', 'BSD',]
 },
 
 // Collect contribution information
