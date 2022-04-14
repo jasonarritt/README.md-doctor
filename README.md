@@ -15,6 +15,10 @@
   Currently, installation requires a user to clone the README.md-doctor repository to their local machine and then enter the command "npm install" to install the required Node.js packages.
   ## Usage
   README.md Doctor is initialized by entering "node index.js" on the command line. The user is then greeted and prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire, a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.
+  
+  A demonstration of using README.md Doctor is available at the following Google Drive link:
+  <https://drive.google.com/file/d/1QTv3mo8kgyYNlP6smW_UV5r41uLUFYng/view>
+  
   ## License
   Copyright 2022 jasonarritt
   
