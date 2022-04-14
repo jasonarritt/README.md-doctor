@@ -156,9 +156,10 @@ function writeToFile(data) {
 
 // TODO: Create a function to initialize app
 function init() {
+  console.log('Welcome to README.md Doctor! Please answer the following prompts.');
     promptUser()
     .then(function(data) {
-        return generateMarkdown(mockData);
+        return generateMarkdown(data);
     })
     .then(function(data) {
     writeToFile(data)
