@@ -6,14 +6,14 @@ const generateMarkdown = require ('./utils/generateMarkdown.js');
 const mockData = {
     title: 'README.md Doctor',
     description: 'README.md Doctor allows users to easily create a professional README.md file for a given project by answering a series of questions.',
-    badge: 'I do not have a badge right now.',
-    installation: 'At this time, installation requires a user to clone the README.md-doctor repository to their local machine and using Node to run index.js ("node index.js")',
+    // badge: 'I do not have a badge right now.',
+    installation: 'At this time, installation requires a user to clone the README.md-doctor repository to their local machine and using Node to run index.js ("node index.js").',
     usage: 'When README.md Doctor is initialized the user will be prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.',
-    license: 'Currently there is no license in use for README.md Doctor.',
-    contributions: 'So far all contributions have been made by myself.',
+    license: 'MIT',
+    contribute: 'So far all contributions have been made by myself. Others can contribute by reaching out to the email address listed in the contact section below.',
     testing: 'So far all testing has been conducted on my local machine, on which I am currently writing this',
     repo: 'https://github.com/jasonarritt/README.md-doctor',
-    github: 'https://github.com/jasonarritt',
+    github: 'jasonarritt',
     contact: 'jason.a.arritt@gmail.com'
   };
 
@@ -52,19 +52,19 @@ const questions = [
 },
 
 // Collect badge information
-{
-    type: 'input',
-    name: 'badge',
-    message: 'Please enter the badge for this project:',
-    validate: descriptionInput => {
-        if (descriptionInput) {
-          return true;
-        } else {
-          console.log('Please enter your project description!');
-          return false;
-        }
-    }
-},
+// {
+//     type: 'input',
+//     name: 'badge',
+//     message: 'Please enter the badge for this project:',
+//     validate: descriptionInput => {
+//         if (descriptionInput) {
+//           return true;
+//         } else {
+//           console.log('Please enter your project description!');
+//           return false;
+//         }
+//     }
+// },
 
 // MAKE SURE TO INCLUDE TABLE OF CONTENTS IN MARKDOWN
 
@@ -109,7 +109,7 @@ const questions = [
 // Collect contribution information
 {
     type: 'input',
-    name: 'contributions',
+    name: 'contribute',
     message: 'Please let users know how they can contribute to the project:',
     validate: contributeInput => {
         if (contributeInput) {
@@ -151,7 +151,7 @@ const questions = [
     }
 },
 
-// Collect GitHub information
+// Collect GitHub username
 {
     type: 'input',
     name: 'github',
@@ -203,7 +203,7 @@ function writeToFile(data) {
 function init() {
     promptUser()
     .then(function(data) {
-        return generateMarkdown(data);
+        return generateMarkdown(mockData);
     })
     .then(function(data) {
     writeToFile(data)
@@ -211,9 +211,7 @@ function init() {
     .catch(err => {
         console.log(err);
     });
-
 }
-
 
 // Function call to initialize app
 init();

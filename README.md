@@ -1,33 +1,43 @@
 
   # README.md Doctor
 
-  ## Badge
-  I do not have a badge right now.
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Description 
   README.md Doctor allows users to easily create a professional README.md file for a given project by answering a series of questions.
   ## Table of contents
   - [Installation](#Installation)
   - [Usage](#Usage)
-  - [License](#License)
-  - [Contributions](#Contributions)
+  - [Licensing](#Licensing)
+  - [Contribute](#Contribute)
   - [Testing](#Testing)
-  - [Repository Link](#Repository)
+  - [Repository](#Repository)
   - [GitHub Info](#GitHub) 
   ## Installation
   At this time, installation requires a user to clone the README.md-doctor repository to their local machine and using Node to run index.js ("node index.js").
   ## Usage
   When README.md Doctor is initialized the user will be prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.
-  ## License
-  Currently there is no license in use for README.md Doctor.
-  ## Contributions
+  ## Licensing
+  Copyright 2022 jasonarritt
+  
+
+
+      Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+      The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+      THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      
+  <https://opensource.org/licenses/MIT/>
+  ## Contribute
   So far all contributions have been made by myself. Others can contribute by reaching out to the email address listed in the contact section below.
   ## Testing
-  So far all testing has been conducted on my local machine, on which I am currently writing this.
+  So far all testing has been conducted on my local machine, on which I am currently writing this
   ## Repository
   <https://github.com/jasonarritt/README.md-doctor>
   ## GitHub
-  <https://github.com/jasonarritt>
+  <https://github.com/jasonarritt/>
   ## Contact
   jason.a.arritt@gmail.com
 
   This README.md was generated using README.md Doctor.
+  Copyright 2022
