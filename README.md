@@ -7,16 +7,15 @@
   ## Table of contents
   - [Installation](#Installation)
   - [Usage](#Usage)
-  - [Licensing](#Licensing)
-  - [Contribute](#Contribute)
-  - [Testing](#Testing)
-  - [Repository](#Repository)
-  - [GitHub Info](#GitHub) 
+  - [License](#License)
+  - [Contributing](#Contributing)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
   ## Installation
-  At this time, installation requires a user to clone the README.md-doctor repository to their local machine and using Node to run index.js ("node index.js").
+  At this time, installation requires a user to clone the README.md-doctor repository to their local machine and use Node.js to run index.js ("node index.js").
   ## Usage
   When README.md Doctor is initialized the user will be prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.
-  ## Licensing
+  ## License
   Copyright 2022 jasonarritt
   
 
@@ -28,16 +27,15 @@
       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       
   <https://opensource.org/licenses/MIT/>
-  ## Contribute
-  So far all contributions have been made by myself. Others can contribute by reaching out to the email address listed in the contact section below.
-  ## Testing
-  So far all testing has been conducted on my local machine, on which I am currently writing this
-  ## Repository
-  <https://github.com/jasonarritt/README.md-doctor>
-  ## GitHub
-  <https://github.com/jasonarritt/>
-  ## Contact
-  jason.a.arritt@gmail.com
+  ## Contributing
+  Others can contribute by reaching out to the email address listed in the Questions section below.
+  ## Tests
+  There is no intricate testing information at this time.
+  ## Questions
+  GitHub is located at <https://github.com/jasonarritt/>.
+
+  If you have questions please, please contact jason.a.arritt@gmail.com.
 
   This README.md was generated using README.md Doctor.
-  Copyright 2022
+  Copyright 2022.
+  

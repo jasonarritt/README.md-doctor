@@ -2,14 +2,13 @@
 const mockData = {
   title: 'README.md Doctor',
   description: 'README.md Doctor allows users to easily create a professional README.md file for a given project by answering a series of questions.',
-  installation: 'At this time, installation requires a user to clone the README.md-doctor repository to their local machine and using Node to run index.js ("node index.js").',
+  installation: 'At this time, installation requires a user to clone the README.md-doctor repository to their local machine and use Node.js to run index.js ("node index.js").',
   usage: 'When README.md Doctor is initialized the user will be prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.',
   license: 'MIT',
-  contribute: 'So far all contributions have been made by myself. Others can contribute by reaching out to the email address listed in the contact section below.',
-  testing: 'So far all testing has been conducted on my local machine, on which I am currently writing this.',
-  repo: 'https://github.com/jasonarritt/README.md-doctor',
+  contributing: 'Others can contribute by reaching out to the email address listed in the Questions section below.',
+  tests: 'There is no intricate testing information at this time.',
   github: 'jasonarritt',
-  contact: 'jason.a.arritt@gmail.com'
+  email: 'jason.a.arritt@gmail.com'
 };
 
 const dayjs = require('dayjs');
@@ -154,33 +153,30 @@ const generateMarkdown = data => {
   ## Table of contents
   - [Installation](#Installation)
   - [Usage](#Usage)
-  - [Licensing](#Licensing)
-  - [Contribute](#Contribute)
-  - [Testing](#Testing)
-  - [Repository](#Repository)
-  - [GitHub Info](#GitHub) 
+  - [License](#License)
+  - [Contributing](#Contributing)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
   ## Installation
   ${data.installation}
   ## Usage
   ${data.usage}
-  ## Licensing
+  ## License
   Copyright ${year} ${data.github}
   ${renderLicenseSection(data.license)}
   <${renderLicenseLink(data.license)}/>
-  ## Contribute
-  ${data.contribute}
-  ## Testing
-  ${data.testing}
-  ## Repository
-  <${data.repo}>
-  ## GitHub
-  <https://github.com/${data.github}/>
-  ## Contact
-  ${data.contact}
+  ## Contributing
+  ${data.contributing}
+  ## Tests
+  ${data.tests}
+  ## Questions
+  GitHub is located at <https://github.com/${data.github}/>.
+
+  If you have questions please, please contact ${data.email}.
 
   This README.md was generated using README.md Doctor.
-  Copyright ${year}
-`;
+  Copyright ${year}.
+  `;
 };
 
 // console.log(generateMarkdown(mockData));
