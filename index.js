@@ -3,18 +3,6 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require ('./utils/generateMarkdown.js');
 
-const mockData = {
-  title: 'README.md Doctor',
-  description: 'README.md Doctor allows users to easily create a professional README.md file for a given project by answering a series of questions.',
-  installation: 'At this time, installation requires a user to clone the README.md-doctor repository to their local machine and use Node.js to run index.js ("node index.js").',
-  usage: 'When README.md Doctor is initialized the user will be prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.',
-  license: 'MIT',
-  contributing: 'Others can contribute by reaching out to the email address listed in the Questions section below.',
-  tests: 'There is no intricate testing information at this time.',
-  github: 'jasonarritt',
-  email: 'jason.a.arritt@gmail.com'
-};
-
 // TODO: Create an array of questions for user input
 const questions = [
 
@@ -48,23 +36,6 @@ const questions = [
         }
     }
 },
-
-// Collect badge information
-// {
-//     type: 'input',
-//     name: 'badge',
-//     message: 'Please enter the badge for this project:',
-//     validate: descriptionInput => {
-//         if (descriptionInput) {
-//           return true;
-//         } else {
-//           console.log('Please enter your project description!');
-//           return false;
-//         }
-//     }
-// },
-
-// MAKE SURE TO INCLUDE TABLE OF CONTENTS IN MARKDOWN
 
 // Collect installation information
 {
@@ -104,7 +75,7 @@ const questions = [
     choices: ['None', 'MIT', 'ISC', 'Apache', 'GNU GPLv3', 'BSD',]
 },
 
-// Collect contribution information
+// Collect contributing information
 {
     type: 'input',
     name: 'contributing',
@@ -119,7 +90,7 @@ const questions = [
     }
 },
 
-// Collect testing information
+// Collect tests information
 {
     type: 'input',
     name: 'tests',
@@ -133,21 +104,6 @@ const questions = [
         }
     }
 },
-
-// Collect repo information
-// {
-//     type: 'input',
-//     name: 'repo',
-//     message: 'Please enter the URL for the repository:',
-//     validate: repoInput => {
-//         if (repoInput) {
-//           return true;
-//         } else {
-//           console.log('Please enter the repository URL for this project!');
-//           return false;
-//         }
-//     }
-// },
 
 // Collect GitHub username
 {
@@ -180,6 +136,7 @@ const questions = [
 }
 ];
 
+// Function to prompt user with questions
 const promptUser = () => {
     return inquirer.prompt(questions);
 };

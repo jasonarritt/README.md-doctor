@@ -1,19 +1,6 @@
 
-const mockData = {
-  title: 'README.md Doctor',
-  description: 'README.md Doctor allows users to easily create a professional README.md file for a given project by answering a series of questions.',
-  installation: 'At this time, installation requires a user to clone the README.md-doctor repository to their local machine and use Node.js to run index.js ("node index.js").',
-  usage: 'When README.md Doctor is initialized the user will be prompted with a series of questions to collect information related to the application for which they are generating the README.md file. Upon completing the questionnaire a professional README.md file will be generated. The user can then retrieve this README.md file, edit it as needed and use it for their application.',
-  license: 'MIT',
-  contributing: 'Others can contribute by reaching out to the email address listed in the Questions section below.',
-  tests: 'There is no intricate testing information at this time.',
-  github: 'jasonarritt',
-  email: 'jason.a.arritt@gmail.com'
-};
-
 const dayjs = require('dayjs');
 let year = dayjs().year();
-
 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
@@ -21,7 +8,7 @@ function renderLicenseBadge(license) {
   switch (license) {
     case 'None':
       return '';
-
+// Badges for options other than "None"
     case 'MIT':
       return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
 
@@ -45,7 +32,7 @@ function renderLicenseLink(license) {
   switch (license) {
     case 'None':
       return '';
-
+// Links to license information at opensource.org for options other than "None"
     case 'MIT':
       return 'https://opensource.org/licenses/MIT';
 
@@ -69,7 +56,7 @@ function renderLicenseSection(license) {
   switch (license) {
     case 'None':
       return '';
-
+// License text blocks for options other than "None"
     case 'MIT':
       return `
 
@@ -144,6 +131,7 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 const generateMarkdown = data => {
+// Markdown template
   return `
   # ${data.title}
 
@@ -178,7 +166,5 @@ const generateMarkdown = data => {
   Copyright ${year}.
   `;
 };
-
-// console.log(generateMarkdown(mockData));
 
 module.exports = generateMarkdown;
